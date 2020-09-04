@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
+
   public texto:string;
+  
   constructor() { }
 
   ngOnInit(): void {
