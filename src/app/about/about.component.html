@@ -12,3 +12,17 @@
 <div>Quem somos: </div>
 <div>{{about.nome}}</div>
 <div>{{about.email}}</div>
+
+<h2>Lista</h2>
+
+<table border="1">
+  <tr>
+    <th>Nome</th>
+    <th>Email</th>
+  </tr>
+    
+  <tr *ngFor="let lista of lista">
+    <td>{{lista.nome}}</td>
+    <td>{{lista.email}}</td>
+  </tr>
+</table>

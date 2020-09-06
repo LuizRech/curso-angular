@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { RouterModule, Routes } from '@angular/router';
 
 
 const routes:Routes = [
   {path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule)},
-  {path: 'about', loadChildren: () => import('./about/about.module').then(m => m.AboutModule)}
+  {path: 'about', loadChildren: () => import('./about/about.module').then(m => m.AboutModule)},
+  {path: 'usuario', loadChildren: () => import('./usuario/usuario.module').then(m => m.UsuarioModule)}
   // {path: '', pathMatch: 'full', redirectTo: '/home'}
 ];
 

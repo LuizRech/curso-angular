@@ -12,6 +12,8 @@ export class AboutComponent implements OnInit {
   public texto:string;
 
   public about:About;
+
+  public lista:About[];
   
   constructor(private AboutService:AboutService) { }
 
@@ -19,6 +21,8 @@ export class AboutComponent implements OnInit {
     this.texto = "About Page"; //Property bind, onde no html pode ser recuperado com os {{}}
 
     this.about = this.AboutService.getAbout();
+
+    this.lista = this.AboutService.listaAbout();
   }
 
   clicou(){
