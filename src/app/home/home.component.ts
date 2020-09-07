@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { About } from '../about';
-import { AboutService } from '../about.service';
+import { Usuario } from '../usuario';
+import { UsuarioService } from '../usuario.service';
 
 @Component({
   selector: 'app-home',
@@ -10,13 +10,13 @@ import { AboutService } from '../about.service';
 export class HomeComponent implements OnInit {
 
   public texto:string;
-  public about:About;
+  public usuario:Usuario;
 
-  constructor(private AboutService:AboutService) { }
+  constructor(private UsuarioService:UsuarioService) { }
 
   ngOnInit(): void {
     this.texto = "Estamos na Home page, clique no botao";
-    this.about = this.AboutService.getAbout();
+    this.usuario = this.UsuarioService.getUsuario();
   }
 
   clicou(){

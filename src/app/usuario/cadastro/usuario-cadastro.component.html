@@ -1,0 +1,18 @@
+<h1>Cadastro</h1>
+<form>
+
+  <div>
+    <labeL>Nome</labeL>
+    <input type="text" name="nome" [(ngModel)]="usuario.nome">
+  </div>
+  
+  <div>
+    <labeL>E-mail</labeL>
+    <input type="email" name="email" [(ngModel)]="usuario.email">
+  </div>
+  
+  <div>
+    <input type="submit" (click)="salvar()" value="Salvar">
+  </div>
+
+</form>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { About } from '../about';
-import { AboutService } from '../about.service';
+import { Usuario } from '../usuario';
+import { UsuarioService } from '../usuario.service';
 
 @Component({
   selector: 'app-about',
@@ -11,18 +11,18 @@ export class AboutComponent implements OnInit {
 
   public texto:string;
 
-  public about:About;
+  public usuario:Usuario;
 
-  public lista:About[];
+  public lista:Usuario[];
   
-  constructor(private AboutService:AboutService) { }
+  constructor(private UsuarioService:UsuarioService) { }
 
   ngOnInit(): void {
     this.texto = "About Page"; //Property bind, onde no html pode ser recuperado com os {{}}
 
-    this.about = this.AboutService.getAbout();
+    this.usuario = this.UsuarioService.getUsuario();
 
-    this.lista = this.AboutService.listaAbout();
+    this.lista = this.UsuarioService.listaUsuario();
   }
 
   clicou(){

@@ -1,23 +1,23 @@
 import { Injectable } from '@angular/core';
-import { About } from './about';
+import { Usuario } from './usuario';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AboutService {
+export class UsuarioService {
 
   constructor() { }
 
-  public getAbout(): About{
-      let about = new About;
+  public getUsuario(): Usuario{
+      let usuario = new Usuario;
 
-      about.nome = "Luiz";
-      about.email = "luiz@gmail.com";
+      usuario.nome = "Luiz";
+      usuario.email = "luiz@gmail.com";
 
-      return about;
+      return usuario;
   }
 
-  public listaAbout(): About[]{
+  public listaUsuario(): Usuario[]{
     return [
       {
         nome: "Luiz",

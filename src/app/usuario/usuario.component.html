@@ -1,2 +1,16 @@
-<p>usuario works!</p>
-dkaspok
+<h1>Tela de Usuario</h1>
+
+<table border="1">
+  <tr>
+    <th>Nome</th>
+    <th>E-mail</th>
+  </tr>
+  <tr *ngFor="let listaUsuario of listaUsuario" >
+    <td>{{listaUsuario.nome}}</td>
+    <td>{{listaUsuario.email}}</td>
+  </tr>
+</table>
+
+<div>
+  <a routerLink="cadastro">Cadastro de novo usuário</a>
+</div>
